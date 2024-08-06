@@ -8,7 +8,6 @@ export const Task = (fork) => ({
         Task((rej, res) =>
             fork(rej, (x) =>
                 other.fork(rej, (y) => {
-                    console.log("X", x, "Y", y);
                     res(x.concat(y));
                 })
             )
